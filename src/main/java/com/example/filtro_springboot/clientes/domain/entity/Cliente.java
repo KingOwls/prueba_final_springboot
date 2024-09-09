@@ -14,27 +14,27 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "cliente")
+@Table(name = "CLIENTE")
 public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long ID;
 
     @Column(length = 100, nullable = false)
-    private String nombre;
+    private String NOMBRE;
 
     @Column(length = 100, nullable = false)
-    private String email;
+    private String EMAIL;
 
     @Column(nullable = false)
-    private Long telefono;
+    private Long TELEFONO;
 
     @Column(length = 100, nullable = false)
-    private String password;
+    private String PASSWORD;
 
     @ManyToOne
-    @JoinColumn(name = "ciudad_id", nullable = false)
-    private Ciudad ciudad;
+    @JoinColumn(name = "CIUDAD_ID", nullable = false)
+    private Ciudad CIUDAD;
 }
 

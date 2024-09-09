@@ -18,36 +18,36 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "repuesto")
+@Table(name = "REPUESTO")
 public class Repuesto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long ID;
 
     @Column(length = 100, nullable = false)
-    private String nombre;
+    private String NOMBRE;
 
     @Column(length = 200)
-    private String descripcion;
+    private String DESCRIPCION;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal precio;
+    private BigDecimal PRECIO;
 
     @Column(nullable = false)
-    private Integer stock;
+    private Integer STOCK;
 
     @ManyToOne
-    @JoinColumn(name = "proveedor_id", nullable = false)
-    private Proveedor proveedor;
+    @JoinColumn(name = "PROVEEDOR_ID", nullable = false)
+    private Proveedor PROVEEDOR;
 
     @ManyToOne
-    @JoinColumn(name = "modelo_id", nullable = false)
-    private Modelo modelo;
+    @JoinColumn(name = "MODELO_ID", nullable = false)
+    private Modelo MODELO;
 
     @ManyToOne
-    @JoinColumn(name = "marca_id", nullable = false)
-    private Marca marca;
+    @JoinColumn(name = "MARCA_ID", nullable = false)
+    private Marca MARCA;
 
 }
 

@@ -16,15 +16,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "modelo")
+@Table(name = "MODELO")
 public class Modelo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long ID;
     
     @Column
-    private String nombre;
+    private String NOMBRE;
 
     @Column
-    private String descripcion;
+    private String DESCRIPCION;
 }

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
-@RequestMapping(path = "api/v1/bicicleta")
+@RequestMapping(path = "api/v1/BICICLETA")
 public class BicicletaController {
 
     @Autowired
@@ -33,13 +33,13 @@ public class BicicletaController {
         bicicletaService.saveOrUpdate(bicicleta);
     }
 
-    @DeleteMapping("/{bicicletaId}")
-    public void delete(@PathVariable("bicicletaId") Long bicicletaId) {
+    @DeleteMapping("/{BICICLETAID}")
+    public void delete(@PathVariable("BICICLETAID") Long bicicletaId) {
         bicicletaService.delete(bicicletaId);
     }
     
-    @GetMapping("/{bicicletaId}")
-    public Optional<Bicicleta> getById(@PathVariable("bicicletaId") Long objectId) {
+    @GetMapping("/{BICICLETAID}")
+    public Optional<Bicicleta> getById(@PathVariable("BICICLETAID") Long objectId) {
         return bicicletaService.getBicicletas(objectId);
     }
 }

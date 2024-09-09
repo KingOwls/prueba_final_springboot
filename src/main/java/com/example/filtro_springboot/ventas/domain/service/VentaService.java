@@ -17,14 +17,14 @@ public class VentaService {
         return ventaRepository.findAll();
     }
 
-    public Optional<Venta> getVenta(Long id){
-        return ventaRepository.findById(id);
-    }
-
     public void saveOrUpdate(Venta venta){
         ventaRepository.save(venta);
     }
 
+    public Optional<Venta> getVenta(Long id){
+        return ventaRepository.findById(id);
+    }
+    
     public void delete(Long id){
         ventaRepository.deleteById(id);
     }

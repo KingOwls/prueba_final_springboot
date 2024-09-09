@@ -16,18 +16,18 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "venta")
+@Table(name = "VENTA")
 public class Venta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long ID;
 
     @Column(nullable = false)
-    private Date fecha;
+    private Date FECHA;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id", nullable = false)
-    private Cliente cliente;
+    @JoinColumn(name = "CLIENTE_ID", nullable = false)
+    private Cliente CLIENTE;
 }
 

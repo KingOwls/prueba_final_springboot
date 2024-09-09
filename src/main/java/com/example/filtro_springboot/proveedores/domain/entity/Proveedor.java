@@ -14,26 +14,26 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "proveedor")
+@Table(name = "PROVEEDOR")
 public class Proveedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long ID;
 
     @Column(length = 100, nullable = false)
-    private String nombre;
+    private String NOMBRE;
 
     @Column(nullable = false)
-    private Long contacto;
+    private Long CONTACTO;
 
     @Column(length = 100, nullable = false)
-    private String email;
+    private String EMAIL;
 
     @Column(nullable = false)
-    private Long telefono;
+    private Long TELEFONO;
 
     @ManyToOne
-    @JoinColumn(name = "ciudad_id", nullable = false)
-    private Ciudad ciudad;
+    @JoinColumn(name = "CIUDAD_ID", nullable = false)
+    private Ciudad CIUDAD;
 }

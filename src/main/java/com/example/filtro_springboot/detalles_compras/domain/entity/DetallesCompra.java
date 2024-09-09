@@ -17,23 +17,23 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "detalles_compra")
+@Table(name = "DETALLE_COMPRA")
 public class DetallesCompra {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "compra_id", nullable = false)
-    private Compra compra;
-
-    @ManyToOne
-    @JoinColumn(name = "repuesto_id", nullable = false)
-    private Repuesto repuesto;
+    private Long ID;
 
     @Column(nullable = false)
-    private Integer cantidad;
+    private Integer CANTIDAD;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal precioUnitario;
+    private BigDecimal PRECIOUNITARIO;
+
+    @ManyToOne
+    @JoinColumn(name = "COMPRA_ID", nullable = false)
+    private Compra COMPRA;
+
+    @ManyToOne
+    @JoinColumn(name = "REPUESTO_ID", nullable = false)
+    private Repuesto REPUESTO;
 }

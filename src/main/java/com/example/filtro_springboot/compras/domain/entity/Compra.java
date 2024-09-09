@@ -17,21 +17,21 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "compra")
+@Table(name = "COMPRA")
 public class Compra {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long ID;
 
     @Column(nullable = false)
-    private Date fecha;
-
-    @ManyToOne
-    @JoinColumn(name = "proveedor_id", nullable = false)
-    private Proveedor proveedor;
+    private Date FECHA;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal total;
+    private BigDecimal TOTAL;
+
+    @ManyToOne
+    @JoinColumn(name = "PROVEEDOR_ID", nullable = false)
+    private Proveedor PROVEEDOR;
 }
 

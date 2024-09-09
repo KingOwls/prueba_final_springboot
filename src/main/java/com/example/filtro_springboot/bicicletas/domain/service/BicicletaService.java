@@ -16,12 +16,12 @@ public class BicicletaService {
         return bicicletaRepositoy.findAll();
     }
 
-    public Optional<Bicicleta> getBicicletas(Long id){
-        return bicicletaRepositoy.findById(id);
-    }
-
     public void saveOrUpdate(Bicicleta bicicleta){
         bicicletaRepositoy.save(bicicleta);
+    }
+
+    public Optional<Bicicleta> getBicicletas(Long id){
+        return bicicletaRepositoy.findById(id);
     }
 
     public void delete(Long id){

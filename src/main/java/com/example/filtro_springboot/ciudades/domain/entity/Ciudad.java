@@ -14,16 +14,16 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "ciudad")
+@Table(name = "CIUDAD")
 public class Ciudad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long ID;
 
     @Column(length = 100, nullable = false)
-    private String nombre;
+    private String NOMBRE;
 
     @ManyToOne
-    @JoinColumn(name = "pais_id", nullable = false)
-    private Pais pais;
+    @JoinColumn(name = "PAIS_ID", nullable = false)
+    private Pais PAIS;
 }

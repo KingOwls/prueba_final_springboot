@@ -17,25 +17,26 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "bicicleta")
+@Table(name = "BICICLETA")
 public class Bicicleta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "modelo_id", nullable = false)
-    private Modelo modelo;
-
-    @ManyToOne
-    @JoinColumn(name = "marca_id", nullable = false)
-    private Marca marca;
+    private Long ID;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private BigDecimal precio;
+    private BigDecimal PRECIO;
 
     @Column(nullable = false)
-    private Integer stock;
+    private Integer STOCK;
+
+    @ManyToOne
+    @JoinColumn(name = "MODELO_ID", nullable = false)
+    private Modelo MODELO;
+
+    @ManyToOne
+    @JoinColumn(name = "MARCA_ID", nullable = false)
+    private Marca MARCA;
+
 }
 

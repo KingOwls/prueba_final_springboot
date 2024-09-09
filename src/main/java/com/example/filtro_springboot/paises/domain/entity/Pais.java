@@ -10,12 +10,12 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "pais")
+@Table(name = "PAIS")
 public class Pais {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long ID;
 
     @Column(length = 100)
-    private String nombre;
+    private String NOMBRE;
 }
